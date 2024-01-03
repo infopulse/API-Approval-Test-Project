@@ -1,11 +1,10 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
-on:
-  push:
-    branches: [ "master" ]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
+env:
+  SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+  
 concurrency:
   group: "test"
   cancel-in-progress: false
