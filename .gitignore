@@ -1,0 +1,13 @@
+# IDE and venv
+.idea
+.venv
+
+# build files
+*.egg-info
+build
+
+# secret files
+.env
+
+# test results
+results.xml

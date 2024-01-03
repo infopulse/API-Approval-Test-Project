@@ -1,0 +1,31 @@
+# pyproject.toml
+[project]
+name = "approval-api-testing"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Demo project for API testing when there are no expected results defined"
+authors = [
+    { name = "Oleksii Ostapov", email = "oleksii.ostapov@infopulse.com" }
+]
+readme = "README.md"
+
+dependencies = [
+    "pytest>=7.4.3",
+    "requests>=2.31.0",
+    "python-dotenv==1.*",
+    "tinydb==4.*",
+]
+
+[project.urls]
+homepage = "https://infopulse.com"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--base-url https://jsonplaceholder.typicode.com/ --db expected_results.json"
+testpaths = [
+    "tests",
+]
+markers = [
+    "smoke: marker for smoke tests",
+    "single: marker for tests cannot be executed in parallel"
+]
