@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   # test job
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,6 +31,7 @@ jobs:
         uses: test-summary/action@v2
         with:
           paths: "results.xml"
+          output: test-summary.md
         if: always()
       - name: Upload test summary
         uses: actions/upload-artifact@v3
