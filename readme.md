@@ -1,3 +1,4 @@
+[![Deploy Jekyll with GitHub Pages dependencies preinstalled](https://github.com/infopulse-qa/API-Approval-Test-Project/actions/workflows/test.yml/badge.svg)](https://github.com/infopulse-qa/API-Approval-Test-Project/actions/workflows/test.yml)
 # Approval test project example
 
 Inspired by https://approvaltests.com/
